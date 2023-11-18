@@ -127,10 +127,10 @@ $querykategori = mysqli_query($con, "SELECT * FROM kategori where id!='$data[kat
                     $queryUpdate = mysqli_query($con, "UPDATE produk SET kategori_id='$kategori', nama='$nama',  harga='$harga', detail='$detail', ketersediaan_stok='$ketersediaan_stok' WHERE id=$id");
 
                     if ($nama_file != '') {
-                        if ($image_size > 500000) {
+                        if ($image_size > 500000000000) {
                 ?>
                             <div class="alert alert-warning mt-3" role="alert">
-                                File tidak boleh melebihi 500 kb
+                                File tidak boleh melebihi 5 mb
                             </div>
                         <?php
                         } else {
